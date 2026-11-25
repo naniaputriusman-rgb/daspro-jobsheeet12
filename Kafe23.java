@@ -30,11 +30,23 @@ public class Kafe23 {
         Scanner sc = new Scanner(System.in);
         Menu("Andi", true);
 
-        System.out.print("\nMasukkan nomor menu yang ingin Anda pesan: ");
-        int pilihanMenu = sc.nextInt();
-        System.out.print("Masukkan jumlah item yang ingin dipesan: ");
-        int banyakItem = sc.nextInt();
+        int totalBayar = 0;
 
-        hitungTotalHarga23(pilihanMenu, banyakItem);
+        while (true) {
+            System.out.print("\nMasukkan nomor menu yang ingin Anda pesan: ");
+            int pilihanMenu = sc.nextInt();
+            System.out.print("Masukkan jumlah item yang ingin dipesan: ");
+            int banyakItem = sc.nextInt();
+
+            totalBayar += hitungTotalHarga23(pilihanMenu, banyakItem);
+
+            System.out.print("Pesan menu lain? (y/n): ");
+            String lagi = sc.next();
+            if (lagi.equalsIgnoreCase("n")) {
+                break;
+            }
+        }
+
+        System.out.println("Total harga untuk pesanan Anda: Rp" + totalBayar);
     }
 }
