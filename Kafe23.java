@@ -35,6 +35,13 @@ public class Kafe23 {
         while (true) {
             System.out.print("\nMasukkan nomor menu yang ingin Anda pesan: ");
             int pilihanMenu = sc.nextInt();
+
+            // 3b: tolak nomor menu di luar 1 sampai 6
+            if (pilihanMenu < 1 || pilihanMenu > 6) {
+                System.out.println("Menu tidak tersedia");
+                continue;
+            }
+
             System.out.print("Masukkan jumlah item yang ingin dipesan: ");
             int banyakItem = sc.nextInt();
 
