@@ -1,6 +1,7 @@
 public class PengunjungKafe23 {
 
-    static void daftarPengunjung(String... namaPengunjung) {
+    static void daftarPengunjung(int nomorMeja, String... namaPengunjung) {
+        System.out.println("Nomor Meja: " + nomorMeja);
         System.out.println("Daftar Nama Pengunjung:");
         for (String nama : namaPengunjung) {
             System.out.println("- " + nama);
@@ -8,6 +9,6 @@ public class PengunjungKafe23 {
     }
 
     public static void main(String[] args) {
-        daftarPengunjung("Ali", "Budi", "Citra");
+        daftarPengunjung(5, "Ali", "Budi", "Citra");
     }
 }
