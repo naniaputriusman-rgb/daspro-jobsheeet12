@@ -7,8 +7,7 @@ public class PengunjungKafe23 {
     }
 
     public static void main(String[] args) {
-        daftarPengunjung("Ali", "Budi", "Citra");
-        daftarPengunjung("Andi");
-        daftarPengunjung("Doni", "Eti", "Fahmi", "Galih");
+        String[] tamu = {"Ali", "Budi", "Citra"};
+        daftarPengunjung(tamu);
     }
 }
