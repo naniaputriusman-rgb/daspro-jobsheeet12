@@ -37,6 +37,10 @@ public class Kafe23 {
             System.out.println("Kode promo invalid");
         }
 
+        if (isMember) {
+            persen += 10;
+        }
+
         // kalikan dulu baru bagi, supaya hasil int tidak terpotong
         return total * persen / 100;
     }
@@ -79,7 +83,11 @@ public class Kafe23 {
         String kodePromo = sc.nextLine();
 
         int diskon = hitungDiskon(totalHarga, kodePromo, isMember);
+        int totalBayar = totalHarga - diskon;
 
-        System.out.println("\nBesar diskon: Rp" + diskon);
+        // 4c: tampilkan total harga, besar diskon, dan total yang harus dibayar
+        System.out.println("\nTotal harga     : Rp" + totalHarga);
+        System.out.println("Besar diskon    : Rp" + diskon);
+        System.out.println("Total dibayar   : Rp" + totalBayar);
     }
 }
