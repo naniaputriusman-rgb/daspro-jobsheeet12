@@ -37,11 +37,6 @@ public class Kafe23 {
             System.out.println("Kode promo invalid");
         }
 
-        // 4b: member mendapat tambahan diskon 10%
-        if (isMember) {
-            persen += 10;
-        }
-
         // kalikan dulu baru bagi, supaya hasil int tidak terpotong
         return total * persen / 100;
     }
