@@ -10,5 +10,6 @@ public class PengunjungKafe23 {
         daftarPengunjung("Ali", "Budi", "Citra");
         daftarPengunjung("Andi");
         daftarPengunjung("Doni", "Eti", "Fahmi", "Galih");
+        daftarPengunjung();
     }
 }
